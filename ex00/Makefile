@@ -6,12 +6,12 @@
 #    By: vodebunm <vodebunm@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/30 08:39:03 by vodebunm          #+#    #+#              #
-#    Updated: 2024/12/30 08:42:32 by vodebunm         ###   ########.fr        #
+#    Updated: 2024/12/01 22:32:34 by vodebunm         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = Animal
+NAME = animal
 
 # Source file for the project
 SRC = main.cpp ClassAnimal.cpp ClassCat_Dog.cpp ClassWrongCat.cpp
@@ -20,10 +20,10 @@ SRC = main.cpp ClassAnimal.cpp ClassCat_Dog.cpp ClassWrongCat.cpp
 OBJ = $(SRC:.cpp=.o)
 
 # Compiler to be used
-CC = g++
+CXX = c++
 
 # Compilation flags for warnings and C++ standard compliance
-FLAGS =  -Wall -Wextra -Werror -std=c++98
+CXXFLAGS =  -Wall -Wextra -Werror -std=c++98
 
 # Command to remove files
 RM = rm -f
@@ -33,7 +33,10 @@ all: $(NAME)
 
 # Target to link the object files and create the executable
 $(NAME): $(OBJ)
-	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
+
+%.o : %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 # Target to remove the object files
 clean:
