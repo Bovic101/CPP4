@@ -6,7 +6,7 @@
 /*   By: vodebunm <vodebunm@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 08:38:56 by vodebunm          #+#    #+#             */
-/*   Updated: 2024/12/30 09:53:32 by vodebunm         ###   ########.fr       */
+/*   Updated: 2024/12/01 22:18:59 by vodebunm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class WrongCat : public WrongAnimal
     public:
         WrongCat();
         ~WrongCat();
-        void makeSound() const override;
+        void makeSound() const;
 };
 
 #endif

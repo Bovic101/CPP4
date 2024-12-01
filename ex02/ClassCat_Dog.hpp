@@ -6,7 +6,7 @@
 /*   By: vodebunm <vodebunm@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 08:38:49 by vodebunm          #+#    #+#             */
-/*   Updated: 2024/12/01 21:33:37 by vodebunm         ###   ########.fr       */
+/*   Updated: 2024/12/01 22:21:25 by vodebunm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Dog : public AAnimal
         Dog(const Dog& cp);
         Dog& operator=(const Dog& cp);
         ~Dog();
-        void makeSound() const override;
+        void makeSound() const;
 };
 
 class Cat : public AAnimal 
@@ -39,7 +39,7 @@ class Cat : public AAnimal
         Cat(const Cat& cp);
         Cat& operator=(const Cat& cp);
         ~Cat();
-        void makeSound() const override;
+        void makeSound() const;
 };
 
 #endif

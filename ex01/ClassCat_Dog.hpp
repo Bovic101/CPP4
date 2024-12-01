@@ -6,7 +6,7 @@
 /*   By: vodebunm <vodebunm@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 08:38:49 by vodebunm          #+#    #+#             */
-/*   Updated: 2024/12/30 11:14:52 by vodebunm         ###   ########.fr       */
+/*   Updated: 2024/12/01 22:19:31 by vodebunm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Dog : public Animal
         Dog& operator=(const Dog& cp);  // Assignment operator
         virtual ~Dog();  // Destructor
 
-        void makeSound() const override;  // Override makeSound for Dog
+        void makeSound() const;  // Override makeSound for Dog
 };
 
 class Cat : public Animal 
@@ -41,7 +41,7 @@ class Cat : public Animal
         Cat& operator=(const Cat& cp);  // Assignment operator
         virtual ~Cat();  // Destructor
 
-        void makeSound() const override;  // Override makeSound for Cat
+        void makeSound() const;  // Override makeSound for Cat
 };
 
 #endif

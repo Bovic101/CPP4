@@ -6,7 +6,7 @@
 /*   By: vodebunm <vodebunm@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 08:38:49 by vodebunm          #+#    #+#             */
-/*   Updated: 2024/12/30 09:24:46 by vodebunm         ###   ########.fr       */
+/*   Updated: 2024/12/01 22:16:20 by vodebunm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Dog : public Animal
     public:
         Dog();
         ~Dog();
-        void makeSound() const override;
+        void makeSound() const;
 };
 
 class Cat : public Animal 
@@ -29,7 +29,7 @@ class Cat : public Animal
     public:
         Cat();
         ~Cat();
-        void makeSound() const override;
+        void makeSound() const;
 };
 
 #endif
