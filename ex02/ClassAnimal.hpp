@@ -6,7 +6,7 @@
 /*   By: vodebunm <vodebunm@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 08:38:38 by vodebunm          #+#    #+#             */
-/*   Updated: 2024/12/01 21:05:18 by vodebunm         ###   ########.fr       */
+/*   Updated: 2024/12/01 21:34:42 by vodebunm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,23 @@
 #include <iostream>
 #include <string>
 
-
 class AAnimal 
 {
     protected:
         std::string cp;
 
-    public:
-        AAnimal();
-        virtual ~AAnimal();  // Virtual destructor for cleanup
+        // Make constructor protected to prevent direct instantiation of AAnimal
+        AAnimal();  // Declare the constructor
 
-        virtual void makeSound() const= 0;  // Virtual function to make sound
-        std::string getCp() const; 
+    public:
+        virtual ~AAnimal();  // Declare the destructor
+
+        virtual void makeSound() const = 0; // Pure virtual function for making sound
+
+        std::string getCp() const;  // Declare the getCp function
 };
 
 #endif
+
+
+
