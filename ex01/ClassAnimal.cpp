@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClassBrain.hpp                                     :+:      :+:    :+:   */
+/*   ClassAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vodebunm <vodebunm@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/30 10:15:52 by vodebunm          #+#    #+#             */
-/*   Updated: 2024/12/30 11:15:39 by vodebunm         ###   ########.fr       */
+/*   Created: 2024/12/30 08:33:57 by vodebunm          #+#    #+#             */
+/*   Updated: 2024/12/30 11:14:11 by vodebunm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLASSBRAIN_HPP
-#define CLASSBRAIN_HPP
+#include "ClassAnimal.hpp"
 
-#include <iostream>
-
-class Brain 
+Animal::Animal() : cp("Unknown Animal") 
 {
-    public:
-        std::string ideas[100];
+    std::cout << "Called constructor for Animal\n";
+}
 
-        Brain();
-        Brain(const Brain& other);
-        Brain& operator=(const Brain& cp);
-        ~Brain();
-};
+Animal::~Animal() 
+{
+    std::cout << "Called destructor for Animal\n";
+}
 
-#endif
+void Animal::makeSound() const 
+{
+    std::cout << "Animal is making a sound\n";
+}
+
+std::string Animal::getCp() const 
+{
+    return cp;
+}

@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClassBrain.hpp                                     :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vodebunm <vodebunm@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/30 10:15:52 by vodebunm          #+#    #+#             */
-/*   Updated: 2024/12/30 11:15:39 by vodebunm         ###   ########.fr       */
+/*   Created: 2024/12/30 08:39:00 by vodebunm          #+#    #+#             */
+/*   Updated: 2024/12/30 11:17:10 by vodebunm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLASSBRAIN_HPP
-#define CLASSBRAIN_HPP
+#include "ClassAnimal.hpp"
+#include "ClassCat_Dog.hpp"
+#include "ClassBrain.hpp"
 
-#include <iostream>
-
-class Brain 
+int main() 
 {
-    public:
-        std::string ideas[100];
+    const Animal* j = new Dog();  // Create a Dog object
+    const Animal* i = new Cat();  // Create a Cat object
 
-        Brain();
-        Brain(const Brain& other);
-        Brain& operator=(const Brain& cp);
-        ~Brain();
-};
+    j->makeSound();
+    i->makeSound(); 
+    delete j;
+    delete i;
 
-#endif
+    return 0;
+}

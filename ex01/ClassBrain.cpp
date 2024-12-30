@@ -6,36 +6,35 @@
 /*   By: vodebunm <vodebunm@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 10:15:33 by vodebunm          #+#    #+#             */
-/*   Updated: 2024/12/30 10:36:52 by vodebunm         ###   ########.fr       */
+/*   Updated: 2024/12/30 11:16:17 by vodebunm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClassBrain.hpp"
+#include <iostream>
 
 Brain::Brain() 
 {
-    std::cout << "Called Brain constructor." << std::endl;
+    std::cout << "Called Brain constructor.\n";
 }
 
-Brain::Brain(const Brain &cp) 
+Brain::Brain(const Brain& cp) 
 {
-    std::cout << "A copy of brain constructor called" << std::endl;
-    int i = 0;
-    while (i < 100) 
+    std::cout << "A copy of Brain constructor called\n";
+    for (int i = 0; i < 100; ++i) 
     {
-        this->ideas[i] = cp.ideas[i];
-        i++;
+        ideas[i] = cp.ideas[i];
     }
 }
 
-Brain &Brain::operator=(const Brain &cp) 
+Brain& Brain::operator=(const Brain& cp) 
 {
-    std::cout << "Called brain assignment operator" << std::endl;
-    if (this != &cp) {
-        int i = 0;
-        while (i < 100) {
-            this->ideas[i] = cp.ideas[i];
-            i++;
+    std::cout << "Called Brain assignment operator\n";
+    if (this != &cp) 
+    {
+        for (int i = 0; i < 100; ++i) 
+        {
+            ideas[i] = cp.ideas[i];
         }
     }
     return *this;
@@ -43,5 +42,5 @@ Brain &Brain::operator=(const Brain &cp)
 
 Brain::~Brain() 
 {
-    std::cout << "Called brain constructor" << std::endl;
+    std::cout << "Called Brain destructor\n";
 }
