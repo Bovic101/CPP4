@@ -6,7 +6,7 @@
 /*   By: victor-linux <victor-linux@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 14:33:37 by victor-linu       #+#    #+#             */
-/*   Updated: 2025/02/09 15:59:53 by victor-linu      ###   ########.fr       */
+/*   Updated: 2025/02/09 17:14:37 by victor-linu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void BUREAUCRAT::increaseGrade()
 }
 
 /*grade decrement function,which increase the grade num to make it the lo2 grade*/
-void BUREAUCRAT::increaseGrade()
+void BUREAUCRAT::decreaseGrade()
 {
     if (_bgrade >= 150)
     {
@@ -81,6 +81,6 @@ const char* BUREAUCRAT::GradeTooLowException::what() const throw()
 //Overload output Operator
 std::ostream& operator << (std::ostream& output, const BUREAUCRAT& b)
 {
-    output << b.getBname() << "and the grade" << b.getBgrade();
+    output << b.getBname() << " have the grade of  " << b.getBgrade();
     return(output);
 }

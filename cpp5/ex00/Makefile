@@ -6,15 +6,15 @@
 #    By: victor-linux <victor-linux@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/30 08:39:03 by vodebunm          #+#    #+#              #
-#    Updated: 2025/02/09 13:06:07 by victor-linu      ###   ########.fr        #
+#    Updated: 2025/02/09 17:16:24 by victor-linu      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = brain
+NAME = BUREAUCRAT
 
 # Source file for the project
-SRC = main.cpp
+SRC = main.cpp ClassBureaucrat.cpp
 
 # Object files will be derived from the source files
 OBJ = $(SRC:.cpp=.o)
