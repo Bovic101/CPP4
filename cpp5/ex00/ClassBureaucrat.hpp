@@ -6,7 +6,7 @@
 /*   By: victor-linux <victor-linux@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 13:34:30 by victor-linu       #+#    #+#             */
-/*   Updated: 2025/02/09 14:28:55 by victor-linu      ###   ########.fr       */
+/*   Updated: 2025/02/09 15:56:58 by victor-linu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class BUREAUCRAT{
     BUREAUCRAT(); //Default Constructor
     BUREAUCRAT(const std::string& bname ,int bgrade); //Parameterised constructor
     BUREAUCRAT(const BUREAUCRAT& cp); //Copy constructor#
-    BUREAUCRAT& operator=(const BUREAUCRAT& cp); //Copy assignment operatoe
+    BUREAUCRAT& operator=(const BUREAUCRAT& cp); //Copy assignment operator
     ~BUREAUCRAT();
     
     //Getters to get retrieve the valus of a the privat
@@ -39,15 +39,16 @@ class BUREAUCRAT{
     //Exception Class
     class GradeTooHighException : public std::exception
     {
-        virtual const char* what() const throw(); //ooveride
+        virtual const char* what() const throw(); //overide
     };
     class GradeTooLowException : public std::exception
     {
-        virtual const char* what() const throw(); //ooveride
+        virtual const char* what() const throw(); //overide
     };
 };
 //Overload Output operator
 
-std::ostream& operator << (std::ostream& a, const BUREAUCRAT& b);
+
+std::ostream& operator << (std::ostream& output, const BUREAUCRAT& b);
 
 #endif
