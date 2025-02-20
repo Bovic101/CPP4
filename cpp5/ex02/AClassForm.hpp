@@ -18,7 +18,7 @@
 #include <string>
 #include "ClassBureaucrat.hpp"
 
-class BUREAUCRAT;  // Forward declaration
+class Bureaucrat;  // Forward declaration
 
 class AForm {
 private:
@@ -29,38 +29,40 @@ private:
 
 public:
     // Constructors and Destructor
-    AForm();  // Default constructor
-    AForm(const std::string& signee, int signGrade, int execGrade); // Parameterized constructor
-    AForm(const Form& cp); // Copy constructor
-    AForm& operator=(const AForm& cp); // Copy assignment operator
+    AForm();
+    AForm(const std::string& signee, int signGrade, int execGrade);
+    AForm(const AForm& cp);
+    AForm& operator=(const AForm& cp);
     virtual ~AForm();
 
     // Getters
-    std::string getSignee() const;
+    const std::string& getSignee() const;
     bool getFormSigned() const;
     int getSignGrade() const;
     int getExecGrade() const;
     
     // Function to sign the form
-    void beSigned(const BUREAUCRAT& bsign);
-    virtual void execute(BUREAUCRAT const & executor) const = 0; //virtual
-    
+    void beSigned(const Bureaucrat& bsign);
+    virtual void execute(Bureaucrat const &executor) const = 0;
+
     // Exception Classes
     class GradeTooHighException : public std::exception {
     public:
         virtual const char* what() const throw();
     };
+
     class GradeTooLowException : public std::exception {
     public:
         virtual const char* what() const throw();
     };
-    class FormUnableToSignException : public std::exception
-    {
+
+    class FormUnableToSignException : public std::exception {
+    public:
         virtual const char* what() const throw();
     };
 };
 
 // Overload of the output operator for Form objects
-std::ostream& operator<<(std::ostream& output, const Form& form);
+std::ostream& operator<<(std::ostream& output, const AForm& form);
 
 #endif

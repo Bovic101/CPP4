@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: victor-linux <victor-linux@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/20 13:44:57 by victor-linu       #+#    #+#             */
-/*   Updated: 2025/02/20 17:35:06 by victor-linu      ###   ########.fr       */
+/*   Created: 2025/02/20 14:52:46 by victor-linu       #+#    #+#             */
+/*   Updated: 2025/02/20 17:28:10 by victor-linu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERYCREATIONFORM_HPP
-#define SHRUBBERYCREATIONFORM_HPP
+#ifndef PRESIDENTIALPARDONFORM_HPP
+#define PRESIDENTIALPARDONFORM_HPP
 
 #include "AClassForm.hpp"
-#include <fstream>
 
-class ShrubberyCreationForm : public AForm {
+class PresidentialPardonForm : public AForm {
 private:
     std::string _target;
 
 public:
     // Constructors and Destructor
-    ShrubberyCreationForm();
-    ShrubberyCreationForm(const std::string& target);
-    ShrubberyCreationForm(const ShrubberyCreationForm& cp);
-    ShrubberyCreationForm& operator=(const ShrubberyCreationForm& cp);
-    ~ShrubberyCreationForm();
+    PresidentialPardonForm();
+    PresidentialPardonForm(const std::string& target);
+    PresidentialPardonForm(const PresidentialPardonForm& cp);
+    PresidentialPardonForm& operator=(const PresidentialPardonForm& cp);
+    ~PresidentialPardonForm();
 
     // Methods
-    void execute(Bureaucrat const &executor) const; // Removed 'override'
+    void execute(Bureaucrat const &executor) const;
 };
 
 #endif
+

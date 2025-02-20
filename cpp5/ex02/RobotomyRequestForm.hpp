@@ -6,7 +6,7 @@
 /*   By: victor-linux <victor-linux@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 13:46:43 by victor-linu       #+#    #+#             */
-/*   Updated: 2025/02/20 14:12:52 by victor-linu      ###   ########.fr       */
+/*   Updated: 2025/02/20 17:34:08 by victor-linu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,23 @@
 #define ROBOTOMYREQUESTFORM_HPP
 
 #include "AClassForm.hpp"
-#include <cstdlib> //needed for randomisatiom
-#include <iostream>
-#include <ctime>
+#include <cstdlib>  // Needed for randomization
+#include <ctime>    // Needed for seeding random numbers
 
-class RobotomyRequestForm : public AForm{
-    private:
+class RobotomyRequestForm : public AForm {
+private:
     std::string _target;
-    public:
-    RobotomyRequestForm();
-    RobotomyRequestForm(const std::string& targetfile);
-    RobotomyRequestForm(const  RobotomyRequestForm& cp);
-    RobotomyRequestForm& operator = (const  RobotomyRequestForm& cp);
-    ~ RobotomyRequestForm();
 
-    void execute(BUREAUCRAT const & executor) const;
+public:
+    // Constructors and Destructor
+    RobotomyRequestForm();
+    RobotomyRequestForm(const std::string& target);
+    RobotomyRequestForm(const RobotomyRequestForm& cp);
+    RobotomyRequestForm& operator=(const RobotomyRequestForm& cp);
+    ~RobotomyRequestForm();
+
+    // Methods
+    void execute(Bureaucrat const &executor) const; // Removed 'override'
 };
 
 #endif

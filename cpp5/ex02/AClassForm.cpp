@@ -13,38 +13,27 @@
 #include "AClassForm.hpp"
 
 // Default Constructor
-AForm::AForm()
-    : _signee("Default"), _FormSigned(false), _signGrade(150), _execGrade(150)
-{
-}
+AForm::AForm() : _signee("Default"), _FormSigned(false), _signGrade(150), _execGrade(150) {}
 
 // Parameterized Constructor
 AForm::AForm(const std::string& signee, int signGrade, int execGrade)
     : _signee(signee), _FormSigned(false), _signGrade(signGrade), _execGrade(execGrade)
 {
-    if (signGrade < 1 || execGrade < 1)
-    {
+    if (signGrade < 1 || execGrade < 1) {
         throw GradeTooHighException();
     }
-    if (signGrade > 150 || execGrade > 150)
-    {
+    if (signGrade > 150 || execGrade > 150) {
         throw GradeTooLowException();
     }
 }
 
 // Copy Constructor
 AForm::AForm(const AForm& cp)
-    : _signee(cp._signee), _FormSigned(cp._FormSigned),
-      _signGrade(cp._signGrade), _execGrade(cp._execGrade)
-{
-}
+    : _signee(cp._signee), _FormSigned(cp._FormSigned), _signGrade(cp._signGrade), _execGrade(cp._execGrade) {}
 
 // Copy Assignment Operator
-AForm& AForm::operator=(const AForm& cp)
-{
-    if (this != &cp)
-    {
-        // Note: _signee, _signGrade, and _execGrade are const and cannot be changed
+AForm& AForm::operator=(const AForm& cp) {
+    if (this != &cp) {
         _FormSigned = cp._FormSigned;
     }
     return *this;
@@ -54,7 +43,7 @@ AForm& AForm::operator=(const AForm& cp)
 AForm::~AForm() {}
 
 // Getters
-std::string AForm::getSignee() const {
+const std::string& AForm::getSignee() const {
     return _signee;
 }
 
@@ -71,30 +60,28 @@ int AForm::getExecGrade() const {
 }
 
 // Function to sign the form
-void AForm::beSigned(const BUREAUCRAT& bsign)
-{
-    if (bsign.getBgrade() > _signGrade)
-    {
+void AForm::beSigned(const Bureaucrat& bsign) {
+    if (bsign.getBgrade() > _signGrade) {
         throw GradeTooLowException();
     }
     _FormSigned = true;
 }
 
-// Exception Definitions
+// Exception Handling
 const char* AForm::GradeTooHighException::what() const throw() {
-    return "Exception: Form grade too high, recheck";
+    return "Exception: Form grade too high, recheck.";
 }
 
 const char* AForm::GradeTooLowException::what() const throw() {
-    return "Exception: Form grade too low, recheck";
+    return "Exception: Form grade too low, recheck.";
 }
-const char* AForm::FormUnableToSignException:: what() const throw() //Addition of a ne funciom
-{
-    return "Exception: Form not signed, recheck";
+
+const char* AForm::FormUnableToSignException::what() const throw() {
+    return "Exception: Form not signed, recheck.";
 }
-// Overload output operator for Form objects
-std::ostream& operator<<(std::ostream& output, const AForm& form)
-{
+
+// Overloaded Output Operator
+std::ostream& operator<<(std::ostream& output, const AForm& form) {
     output << "Form: " << form.getSignee() 
            << " | Signed: " << (form.getFormSigned() ? "Yes" : "No")
            << " | Sign Grade: " << form.getSignGrade()
