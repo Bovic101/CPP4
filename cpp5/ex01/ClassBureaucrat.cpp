@@ -6,7 +6,7 @@
 /*   By: victor-linux <victor-linux@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 14:33:37 by victor-linu       #+#    #+#             */
-/*   Updated: 2025/02/20 10:24:31 by victor-linu      ###   ########.fr       */
+/*   Updated: 2025/02/20 11:18:12 by victor-linu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ void BUREAUCRAT::signForm(Form& form)
     }
     catch(const std::exception& e)
     {
-        std::cout <<_bname << "unable to sign" <<form.getSignee() <<"as a result" << e.what() << '\n';
+        std::cout <<_bname << " unable to sign " <<form.getSignee() <<" as a result: " << e.what() << '\n';
     }
     
 }
