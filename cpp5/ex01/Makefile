@@ -6,15 +6,15 @@
 #    By: victor-linux <victor-linux@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/30 08:39:03 by vodebunm          #+#    #+#              #
-#    Updated: 2025/02/09 17:16:24 by victor-linu      ###   ########.fr        #
+#    Updated: 2025/02/20 10:43:51 by victor-linu      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = BUREAUCRAT
+NAME = form
 
 # Source file for the project
-SRC = main.cpp ClassBureaucrat.cpp
+SRC = main.cpp ClassBureaucrat.cpp ClassForm.cpp 
 
 # Object files will be derived from the source files
 OBJ = $(SRC:.cpp=.o)
