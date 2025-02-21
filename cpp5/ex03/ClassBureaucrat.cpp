@@ -6,7 +6,7 @@
 /*   By: victor-linux <victor-linux@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 14:33:37 by victor-linu       #+#    #+#             */
-/*   Updated: 2025/02/20 17:47:37 by victor-linu      ###   ########.fr       */
+/*   Updated: 2025/02/21 08:12:08 by victor-linu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,3 +104,4 @@ std::ostream& operator<<(std::ostream& output, const Bureaucrat& b) {
     output << b.getBname() << " has a grade of " << b.getBgrade();
     return output;
 }
+

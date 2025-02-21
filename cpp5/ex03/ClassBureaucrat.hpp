@@ -6,7 +6,7 @@
 /*   By: victor-linux <victor-linux@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 13:34:30 by victor-linu       #+#    #+#             */
-/*   Updated: 2025/02/20 17:48:05 by victor-linu      ###   ########.fr       */
+/*   Updated: 2025/02/21 08:11:47 by victor-linu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,3 +58,4 @@ public:
 std::ostream& operator<<(std::ostream& output, const Bureaucrat& b);
 
 #endif // CLASS_BUREAUCRAT_HPP
+

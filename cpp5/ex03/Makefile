@@ -6,48 +6,38 @@
 #    By: victor-linux <victor-linux@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/30 08:39:03 by vodebunm          #+#    #+#              #
-#    Updated: 2025/02/20 16:52:57 by victor-linu      ###   ########.fr        #
+#    Updated: 2025/02/25 01:01:11 by victor-linu      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+NAME = intern
 
-NAME = form
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-# Source file for the project
-SRC = main.cpp ClassBureaucrat.cpp AClassForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
+SRC = main.cpp \
+      ClassBureaucrat.cpp \
+      AClassForm.cpp \
+      PresidentialPardonForm.cpp \
+      RobotomyRequestForm.cpp \
+      ShrubberyCreationForm.cpp \
+      Intern.cpp
 
-# Object files will be derived from the source files
 OBJ = $(SRC:.cpp=.o)
 
-# Compiler to be used
-CXX = c++
-
-# Compilation flags for warnings and C++ standard compliance
-CXXFLAGS =  -Wall -Wextra -Werror -std=c++98
-
-# Command to remove files
-RM = rm -f
-
-# Default target to build the executable
 all: $(NAME)
 
-# Target to link the object files and create the executable
 $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
-%.o : %.cpp
+%.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-# Target to remove the object files
 clean:
-	$(RM) $(OBJ)
+	rm -f $(OBJ)
 
-# Target to remove both object files and the executable
 fclean: clean
-	$(RM) $(NAME)
+	rm -f $(NAME)
 
-# Target to clean and rebuild the project
-re: fclean $(NAME)
+re: fclean all
 
-# Special target to indicate that these targets do not represent files
-.PHONY: all clean fclean re
