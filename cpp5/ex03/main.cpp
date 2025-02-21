@@ -6,7 +6,7 @@
 /*   By: victor-linux <victor-linux@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 13:06:32 by victor-linu       #+#    #+#             */
-/*   Updated: 2025/02/21 01:20:54 by victor-linu      ###   ########.fr       */
+/*   Updated: 2025/02/21 01:23:46 by victor-linu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ int main() {
 
     // Attempt to create an invalid form
     AForm* unknown = intern.makeForm("unknown form", "N/A");
-
-    // Cleanup allocated memory (delete NULL is safe)
     delete shrubbery;
     delete robotomy;
     delete pardon;
