@@ -6,7 +6,7 @@
 /*   By: victor-linux <victor-linux@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 13:15:15 by victor-linu       #+#    #+#             */
-/*   Updated: 2025/02/22 13:33:45 by victor-linu      ###   ########.fr       */
+/*   Updated: 2025/02/22 14:14:44 by victor-linu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 #define SERIALIZER_HPP
 
 #include <iostream>
-#include <cstdint> //This is for the unsiged inter ptr: uintptr_t
+#include <cstddef>
 #include "Data.hpp"
+
+typedef unsigned long uintptr_t; //manually declared unisigned int pointer as it is no available in c++98
 
 class Serializer{
     public:

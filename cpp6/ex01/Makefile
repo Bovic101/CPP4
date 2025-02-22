@@ -6,15 +6,15 @@
 #    By: victor-linux <victor-linux@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/30 08:39:03 by vodebunm          #+#    #+#              #
-#    Updated: 2025/02/22 13:58:25 by victor-linu      ###   ########.fr        #
+#    Updated: 2025/02/22 13:56:40 by victor-linu      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = scalarconvereter
+NAME = serializer
 
 # Source file for the project
-SRC = main.cpp ScalarConverter.cpp
+SRC = main.cpp Serializer.cpp
 
 # Object files will be derived from the source files
 OBJ = $(SRC:.cpp=.o)
