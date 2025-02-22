@@ -6,15 +6,15 @@
 #    By: victor-linux <victor-linux@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/30 08:39:03 by vodebunm          #+#    #+#              #
-#    Updated: 2025/02/20 16:52:57 by victor-linu      ###   ########.fr        #
+#    Updated: 2025/02/22 12:42:28 by victor-linu      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = form
+NAME = converter
 
 # Source file for the project
-SRC = main.cpp ClassBureaucrat.cpp AClassForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
+SRC = main.cpp ScalarConverter.cpp
 
 # Object files will be derived from the source files
 OBJ = $(SRC:.cpp=.o)
