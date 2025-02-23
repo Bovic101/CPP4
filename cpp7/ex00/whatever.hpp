@@ -6,7 +6,7 @@
 /*   By: victor-linux <victor-linux@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 08:23:47 by victor-linu       #+#    #+#             */
-/*   Updated: 2025/02/23 08:53:08 by victor-linu      ###   ########.fr       */
+/*   Updated: 2025/02/23 08:56:16 by victor-linu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ U min(const U &a, const U &b)
 /*Template function that compares the two values and returns the latrgest
 one. If the two of them are equal, then it returns the second one.*/
 template <typename U>
-U min(const U &a, const U &b)
+U max(const U &a, const U &b)
 {
     if (a > b)
     {

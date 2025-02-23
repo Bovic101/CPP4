@@ -6,12 +6,12 @@
 #    By: victor-linux <victor-linux@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/30 08:39:03 by vodebunm          #+#    #+#              #
-#    Updated: 2025/02/22 15:00:32 by victor-linu      ###   ########.fr        #
+#    Updated: 2025/02/23 08:57:20 by victor-linu      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = identity
+NAME = whatever
 
 # Source file for the project
 SRC = main.cpp
