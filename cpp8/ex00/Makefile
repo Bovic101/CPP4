@@ -6,12 +6,12 @@
 #    By: victor-linux <victor-linux@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/30 08:39:03 by vodebunm          #+#    #+#              #
-#    Updated: 2025/02/23 10:36:43 by victor-linu      ###   ########.fr        #
+#    Updated: 2025/02/25 15:37:58 by victor-linu      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = array
+NAME = easyfind
 
 # Source file for the project
 SRC = main.cpp
