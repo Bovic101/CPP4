@@ -6,7 +6,7 @@
 #    By: victor-linux <victor-linux@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/30 08:39:03 by vodebunm          #+#    #+#              #
-#    Updated: 2025/02/26 10:16:14 by victor-linu      ###   ########.fr        #
+#    Updated: 2025/02/26 15:06:07 by victor-linu      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 NAME = mutated
 
 # Source file for the project
-SRC = main.cpp Span.cpp
+SRC = main.cpp
 
 # Object files will be derived from the source files
 OBJ = $(SRC:.cpp=.o)
