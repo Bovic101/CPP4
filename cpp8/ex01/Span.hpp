@@ -6,7 +6,7 @@
 /*   By: victor-linux <victor-linux@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 15:53:26 by victor-linu       #+#    #+#             */
-/*   Updated: 2025/02/25 16:01:20 by victor-linu      ###   ########.fr       */
+/*   Updated: 2025/02/26 09:28:30 by victor-linu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include <iostream>
 #include <vector>
 #include <stdexcept>
+#include <algorithm>
+#include <limits>
 
 class Span {
 private:
