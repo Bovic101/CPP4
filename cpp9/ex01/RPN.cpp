@@ -6,7 +6,7 @@
 /*   By: victor-linux <victor-linux@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 11:43:41 by victor-linu       #+#    #+#             */
-/*   Updated: 2025/02/28 12:28:06 by victor-linu      ###   ########.fr       */
+/*   Updated: 2025/02/28 12:37:29 by victor-linu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void RPN:: processExpression(const std::string &exp)
             int n;
             if (!(numStr >> n))  // This validate number
             {
-                std::cerr << "Error: Invalid token input -> " << token << std::endl;
+                std::cerr << "Error "  << std::endl;
                 return;
             }
             num.push(n);
