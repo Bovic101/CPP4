@@ -6,15 +6,15 @@
 #    By: victor-linux <victor-linux@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/30 08:39:03 by vodebunm          #+#    #+#              #
-#    Updated: 2025/02/26 20:35:39 by victor-linu      ###   ########.fr        #
+#    Updated: 2025/02/28 11:20:22 by victor-linu      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = Bitcoin
+NAME = btc
 
 # Source file for the project
-SRC = main.cpp 
+SRC = main.cpp BitcoinExchange.cpp
 
 # Object files will be derived from the source files
 OBJ = $(SRC:.cpp=.o)
@@ -23,7 +23,7 @@ OBJ = $(SRC:.cpp=.o)
 CXX = c++
 
 # Compilation flags for warnings and C++ standard compliance
-CXXFLAGS =  -Wall -Wextra -Werror -std=c++98
+CXXFLAGS =  -Wall -Wextra -Werror -std=c++17
 
 # Command to remove files
 RM = rm -f
